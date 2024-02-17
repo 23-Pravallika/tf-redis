@@ -17,7 +17,7 @@ resource "aws_elasticache_parameter_group" "pg" {
 }
 
 #Creates Subnet Group.
-resource "aws_elasticache_subnet_group" "redis-subnet_group" {
+resource "aws_elasticache_subnet_group" "redis_subnet_group" {
   name       = "robo-${var.ENV}-redis-subnet_group"
   subnet_ids = data.terraform_remote_state.vpc.outputs.PRIVATE_SUBNET_ID
 }
